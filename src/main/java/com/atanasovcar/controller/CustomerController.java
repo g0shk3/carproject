@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@CrossOrigin(origins = "https://g0sh.netlify.app")
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping
 public class CustomerController {
@@ -35,7 +35,7 @@ public class CustomerController {
 
     @PostMapping("/customers")
     public void createCustomer(@RequestBody Customer customer){
-        customerService.createCustomer(customer);
+        customerService.createOrUpdateCustomer(customer);
     }
 
     @GetMapping("/customers/{id}")

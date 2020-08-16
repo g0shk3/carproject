@@ -17,13 +17,13 @@ public class Customer {
     @Column
     private String email;
 
-    @Column
-    private int phoneNumber;
+    @Column(name = "phones")
+    private String phoneNumber;
 
     public Customer(){
 
     }
-    public Customer(Long id, String firstName, String lastName, String email, int phoneNumber) {
+    public Customer(Long id, String firstName, String lastName, String email, String phoneNumber) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -60,11 +60,11 @@ public class Customer {
         this.email = email;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 }

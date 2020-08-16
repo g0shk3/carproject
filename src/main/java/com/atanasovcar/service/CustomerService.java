@@ -8,6 +8,8 @@ import java.util.List;
 @Service
 public interface CustomerService {
 
+    void createOrUpdateCustomer(Customer customer);
+
     void updateCustomer(Customer customer);
 
     void createCustomer(Customer customer);
